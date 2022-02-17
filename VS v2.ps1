@@ -1,35 +1,34 @@
-param ([Parameter(Mandatory=$true)] $I)  #139.45.197.253 neutral #138.128.150.133 malicious
+param ([Parameter(Mandatory=$true)] $I)  #139.45.197.253 neutral #138.128.150.133 malicious #139.45.197.253 neutral #138.128.150.133 malicious (Replace with Get-Clipboard?)
 $I = $I.Trim()
+
 ## Set TLS 1.2
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
 Function submit-VT($I)
 {
-
     $VTbody = @{resource = $I;}
     $headers=@{}
     $headers.Add("Accept", "application/json")
-    $headers.Add("x-apikey", "KEY GOES HERE")
+    $headers.Add("x-apikey", "5b8cf596a8994ff26bf56145e3531dbf6dc845ca0372476b894ae6d50d89fe25")
     $VTResult = Invoke-WebRequest -Uri "https://www.virustotal.com/api/v3/ip_addresses/$I" -Method GET -Headers $headers
-    return $VTResult
-}
+    return $VTResult}
+
 $VTresult = submit-VT($I)
 #Write-Host $VTresult
 $data = ConvertFrom-Json $VTresult
 
-
-if ([int]$data.data.attributes.last_analysis_stats.malicious -gt 0) {
-    $outcome = "This IP has a malicious rating. Blacklisting is advised"
-    }
-else {
-    $outcome = "This IP has a neutral reputation on VirusTotal."
-}
+if ([int]$data.data.attributes.last_analysis_stats.malicious -gt 0) { $outcome = "This IP has a malicious rating. Blacklisting is advised"}
+else {$outcome = "This IP has a neutral reputation on VirusTotal."}
 
 ## Display results
-Write-Host "======================================================================="
-Write-Host ""
-Write-Host "Source IP: " -NoNewline; Write-Host $I
-Write-Host "Country: " -NoNewline; Write-Host $data.data.attributes.country
-Write-Host "ASN: " -NoNewline; Write-Host $data.data.attributes.as_owner
-Write-Host "VirusTotal URL: " -NoNewline; Write-Host "https://www.virustotal.com/gui/ip-address/$I/detection"
-Write-Host ""
-Write-Host "$outcome"            
+Function DisplayResults(){
+    Write-Host "======================================================================="
+    Write-Host ""
+    Write-Host "Source IP: " -NoNewline; Write-Host $I
+    Write-Host "Country: " -NoNewline; Write-Host $data.data.attributes.country
+    Write-Host "ASN: " -NoNewline; Write-Host $data.data.attributes.as_owner
+    Write-Host "VirusTotal URL: " -NoNewline; Write-Host "https://www.virustotal.com/gui/ip-address/$I/detection"
+    Write-Host ""
+    Write-Host "$outcome"} 
+    
+DisplayResults
