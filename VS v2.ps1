@@ -32,3 +32,6 @@ Function DisplayResults(){
     Write-Host "$outcome"} 
     
 DisplayResults
+Write-Host ""
+Write-Host ""
+pause
