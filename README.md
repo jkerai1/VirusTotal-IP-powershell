@@ -11,7 +11,7 @@ You need to make an account. Once you have done so you can click on the top righ
 Key is found:
 ![API key 2](https://user-images.githubusercontent.com/55988027/154651904-77291d0e-8d44-4767-a0df-047e96a1f530.PNG)
 
-Then you can paste your api key within the line (near line 12-14 at the moment, however this may change)
+Then you can paste your api key within the line, between the quotation marks (near line 12-14 at the moment, however this may change)
 
 ![Capture](https://user-images.githubusercontent.com/55988027/154652083-f8914757-9ec9-457e-afa7-5790dcdfc2a1.PNG)
 
