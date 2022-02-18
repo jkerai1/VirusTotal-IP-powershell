@@ -25,14 +25,16 @@ Function DisplayResults(){
     Write-Host "=======================================================================`n"
 
 
-    Write-Output @"
+    $mystring = @"
 Source IP: $I
 Country: $($data.data.attributes.country)
 ASN: $($data.data.attributes.as_owner)
 VirusTotal URL: https://www.virustotal.com/gui/ip-address/$I/detection
 $outcome
 
-"@ #|Set-Clipboard   #uncomment this if u want to copy contents to clipboard instead
+"@
+Write-Host $mystring
+$mystring | set-clipboard
 }
     
 DisplayResults # 52.222.236.10
