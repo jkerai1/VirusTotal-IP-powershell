@@ -33,3 +33,4 @@ $outcome
 }
     
 DisplayResults 
+pause
