@@ -22,3 +22,8 @@ Now program is ready to use:
 Paste in IP (I stands for IP): 
 
 ![1](https://user-images.githubusercontent.com/55988027/154651931-e9d4a186-b305-4275-9a52-5b572e206b2b.png)
+
+
+To do:
+
+Set-Clipboard for final result?
