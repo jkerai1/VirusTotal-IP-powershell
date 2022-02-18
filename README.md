@@ -27,3 +27,7 @@ Paste in IP (I stands for IP):
 To do:
 
 Set-Clipboard for final result?
+
+
+To get PS version:
+$PSVersionTable
