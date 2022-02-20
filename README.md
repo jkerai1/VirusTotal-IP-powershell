@@ -24,10 +24,10 @@ Paste in IP (I stands for IP):
 ![1](https://user-images.githubusercontent.com/55988027/154651931-e9d4a186-b305-4275-9a52-5b572e206b2b.png)
 
 
-To do:
-
-Set-Clipboard for final result?
+in v3 onwards the output is automatically pasted to the clipboard
 
 
-To get PS version:
+
+--------------------------------------------------------------------------
+To get PS version (required for advanced version of script:
 $PSVersionTable
