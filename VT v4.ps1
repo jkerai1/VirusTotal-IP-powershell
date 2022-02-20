@@ -17,7 +17,7 @@ $VTresult = submit-VT($I)
 #Write-Host $VTresult
 $data = ConvertFrom-Json $VTresult
 
-if ([int]$data.data.attributes.last_analysis_stats.malicious -gt 0) { $outcome = "`nThis IP has a malicious rating. Blacklisting is advised"}
+if ([int]$data.data.attributes.last_analysis_stats.malicious -gt 0) { $outcome = "`nThis IP has a malicious rating. Blacklisting is advised."}
 else {$outcome = "`nThis IP has a neutral reputation on VirusTotal."}
 
 ## Display results
