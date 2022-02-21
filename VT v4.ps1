@@ -1,3 +1,5 @@
+While($TRUE){
+
 function VT {
 [CmdletBinding()]
 
@@ -43,3 +45,4 @@ DisplayResults # 52.222.236.10
 }
 VT
 pause
+}
