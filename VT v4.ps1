@@ -1,6 +1,8 @@
 function VT {
 [CmdletBinding()]
 
+#https://github.com/jkerai1/VirusTotal-IP-powershell
+
 param ([Parameter(Mandatory=$true)] $I) 
 $I = $I.Trim()
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
