@@ -1,6 +1,6 @@
 While($TRUE){
 
-function VT {
+function Get-VT {
 [CmdletBinding()]
 
 #https://github.com/jkerai1/VirusTotal-IP-powershell
