@@ -31,3 +31,6 @@ in v4 onwards the output is automatically pasted to the clipboard
 --------------------------------------------------------------------------
 To get PS version (required for advanced version of script:
 $PSVersionTable
+
+
+Ref: https://developers.virustotal.com/reference/ip-info
