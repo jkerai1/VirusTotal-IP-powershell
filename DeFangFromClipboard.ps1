@@ -1,1 +1,1 @@
-(Get=Clipboard).replace('.','[.]').replace(':','[:]')| Set-Clipboard
+(Get-Clipboard).replace('.','[.]').replace(':','[:]')| Set-Clipboard
